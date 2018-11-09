@@ -37,8 +37,6 @@ Public datasets for local validation: [sdsj2018_automl_check_datasets.zip](https
 - Official [how to](https://github.com/sberbank-ai/sdsj2018-automl/blob/master/README_EN.md#how-to-local-validation)
 - Baseline [example](https://github.com/sberbank-ai/sdsj2018-automl)
 - [@vlarine](https://github.com/vlarine)'s public [kernel](https://github.com/vlarine/sdsj2018_lightgbm_baseline).
-- [@vlarine](https://github.com/vlarine)'s public [kernel](https://github.com/vlarine/sdsj2018_lightgbm_baseline).
-
 
 ### Docker :whale:
 
