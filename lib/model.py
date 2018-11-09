@@ -232,8 +232,6 @@ def predict_lightgbm(X: pd.DataFrame, config: Config) -> List:
             
         print('merging with oof: ', model_score)
 
-        X_test_model_preds = []
-
         tasks = cv_model_data['models']
         func = predict_one
         func_params = {'X':X}
@@ -243,15 +241,12 @@ def predict_lightgbm(X: pd.DataFrame, config: Config) -> List:
         for preds in results:
             preds = pd.Series(preds)
             preds_mean.append(preds)
-            X_test_model_preds.append(preds)
-
-        test_preds_mean = pd.concat(X_test_model_preds,1).mean(1)
 
         iteration_time = time.time()-iteration_start
         elapsed_time = (time.time() - config['start_time']) 
         have_time = (config["time_limit"] - elapsed_time - iteration_time*2) > 35
 
-        save_preds(test_preds_mean,config) #in case of running out of time
+        save_preds(pd.concat(preds_mean,1).mean(1),config) #in case of running out of time
 
         if not have_time:
             break
