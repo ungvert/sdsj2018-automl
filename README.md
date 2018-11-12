@@ -26,7 +26,7 @@ While we have time:
 2. Construct folds as subset from main train LightGBM dataset
 3. Train all folds with LightGBM
 4. Minimize oof-score with HyperOpt
-4. Save all models
+4. Save all models and train another CV cycle if have time
 
 
 ## Local Validation
@@ -42,9 +42,3 @@ Public datasets for local validation: [sdsj2018_automl_check_datasets.zip](https
 
 `docker pull ungvert/sdsj2018`
 
-## Useful links
-
-- [SDSJ2018-AutoML](https://github.com/sberbank-ai/sdsj2018-automl)
-- [LightGBM Baseline](https://github.com/vlarine/sdsj2018_lightgbm_baseline)
-- [Sberbank Data Science Journey 2018: Docker-friendly baseline](https://github.com/tyz910/sdsj2018)
-- [Leakage](https://github.com/bagxi/sdsj2018-leakage)
