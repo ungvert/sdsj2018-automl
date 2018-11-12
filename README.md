@@ -26,7 +26,7 @@ While we have time:
 2. Construct folds as subset from main train LightGBM dataset
 3. Train all folds with LightGBM
 4. Minimize oof-score with HyperOpt
-4. Save all models and train another CV cycle if have time
+4. Save all models 
 
 
 ## Local Validation
